@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Utkarsh &amp; Shradha · 19 December 2026</title>
+  <meta name="description" content="Utkarsh &amp; Shradha's wedding — Saturday 19 December 2026, 12:45 PM, Shri Beereshwar Bhavan, Examba–Chikodi, Belgaum.">
+  <meta name="theme-color" content="#0C5755">
+  <meta property="og:title" content="Utkarsh ❀ Shradha · शुभविवाह">
+  <meta property="og:description" content="Saturday 19 December 2026 · 12:45 PM · Shri Beereshwar Bhavan, Examba–Chikodi">
+  <meta property="og:image" content="assets/photos/walk.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F48C06'/%3E%3Ccircle cx='32' cy='32' r='20' fill='%23FFC62B'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%239B0E22'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Kalam:wght@700&family=Martel:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.add('js');
+    document.documentElement.lang = localStorage.getItem('lang') || 'en';
+  </script>
+</head>
+<body class="locked">
+
+<canvas id="akshata" aria-hidden="true"></canvas>
+
+<!-- ═════════ ANTARPAT — the silk cloth held between bride and groom ═════════ -->
+<div class="antarpat" id="antarpat" role="dialog" aria-modal="true" aria-labelledby="ap-names">
+  <div class="ap-cloth">
+    <div class="ap-band"><div class="padar"></div></div>
+    <div class="ap-body">
+      <p class="ap-names" id="ap-names" lang="mr">उत्कर्ष <span>❀</span> श्रद्धा</p>
+      <p class="ap-date">Utkarsh &amp; Shradha · १९ · १२ · २०२६</p>
+
+      <svg class="swastik" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <filter id="kumkum-rough">
+            <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/>
+          </filter>
+        </defs>
+        <g filter="url(#kumkum-rough)">
+          <path pathLength="1" d="M50 50V16H82"/>
+          <path pathLength="1" d="M50 50H84V82"/>
+          <path pathLength="1" d="M50 50V84H18"/>
+          <path pathLength="1" d="M50 50H16V18"/>
+          <circle cx="31" cy="31" r="4.6"/><circle cx="69" cy="31" r="4.6"/>
+          <circle cx="31" cy="69" r="4.6"/><circle cx="69" cy="69" r="4.6"/>
+        </g>
+      </svg>
+
+      <!-- the chant appears in the same spot the note + buttons fade out of, so nothing jumps -->
+      <div class="ap-foot">
+        <p class="ap-chant" id="ap-chant" lang="mr" aria-live="polite"></p>
+        <div class="ap-intro">
+          <p class="ap-note">
+            <span lang="en">At a Marathi wedding, a silk antarpat hangs between bride and groom until the last mangalashtak is sung.</span>
+            <span lang="mr">शेवटचे मंगलाष्टक होईपर्यंत वधू-वरांमध्ये अंतरपाट धरला जातो.</span>
+          </p>
+          <div class="ap-actions">
+            <button class="ap-lift" data-lift="en"><b>Lift the antarpat</b><small>English</small></button>
+            <button class="ap-lift" data-lift="mr" lang="mr"><b>अंतरपाट दूर करा</b><small>मराठी</small></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ap-band bottom"><div class="padar"></div></div>
+  </div>
+</div>
+
+<!-- ═════════ TOP BAR ═════════ -->
+<header class="topbar" id="topbar">
+  <a class="monogram" href="#top" lang="mr" aria-label="Utkarsh &amp; Shradha — back to top">उ<span>❀</span>श</a>
+  <nav aria-label="Sections">
+    <a href="#muhurat" class="nav-wide"><span class="t" lang="en">When &amp; where</span><span class="t" lang="mr">मुहूर्त व स्थळ</span></a>
+    <a href="#moments" class="nav-wide"><span class="t" lang="en">Photos</span><span class="t" lang="mr">क्षणचित्रे</span></a>
+    <div class="lang" role="group" aria-label="Language / भाषा">
+      <button data-set-lang="en" aria-pressed="true">EN</button>
+      <button data-set-lang="mr" lang="mr" aria-pressed="false">मराठी</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ═════════ HERO — Paithani teal ═════════ -->
+  <section class="hero silk-teal" id="top" aria-labelledby="hero-title">
+    <div class="toran" id="toran" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <img class="ganesha" src="assets/ganesha.png" alt="" width="256" height="222">
+      <p class="invocation" lang="mr">॥ श्री ज्योतिर्लिंग प्रसन्न ॥<br>॥ श्री तुळजाभवानी प्रसन्न ॥</p>
+
+      <h1 class="sr-only" id="hero-title">Utkarsh weds Shradha — Saturday 19 December 2026</h1>
+
+      <div class="stage">
+        <div class="name groom">
+          <span class="latin split">Utkarsh</span>
+          <span class="deva" lang="mr">उत्कर्ष</span>
+        </div>
+
+        <span class="amp" aria-hidden="true">❀</span>
+
+        <figure class="arch hero-arch" data-akshata>
+          <img src="assets/photos/walk.jpg" alt="Utkarsh and Shradha walking hand in hand at sunset, she in a teal silk saree, he in a matching teal jacket" width="854" height="1281">
+          <figcaption class="ribbon" lang="mr">— शुभविवाह —</figcaption>
+        </figure>
+
+        <div class="name bride">
+          <span class="latin split">Shradha</span>
+          <span class="deva" lang="mr">श्रद्धा</span>
+        </div>
+      </div>
+
+      <p class="hero-date">
+        <span class="t" lang="en">Saturday · 19 December 2026 · 12:45 PM</span>
+        <span class="t" lang="mr">शनिवार · १९ डिसेंबर २०२६ · दुपारी १२:४५</span>
+      </p>
+      <p class="hero-place">
+        <span class="t" lang="en">Shri Beereshwar Bhavan · Examba – Chikodi</span>
+        <span class="t" lang="mr">श्री बीरेश्वर भवन · एकसंबा – चिकोडी</span>
+      </p>
+      <a class="scroll-cue" href="#invite" aria-label="Scroll to the invitation"><span></span></a>
+    </div>
+    <div class="padar"></div>
+  </section>
+
+  <!-- ═════════ INVITATION & FAMILIES — rani silk ═════════ -->
+  <section class="sec invite silk-rani" id="invite" aria-labelledby="invite-title">
+    <p class="eyebrow reveal"><span class="t" lang="en">Wedding invitation</span><span class="t" lang="mr">॥ विवाह निमंत्रण ॥</span></p>
+    <h2 class="reveal" id="invite-title">
+      <span class="t" lang="en">Two hearts, two families, and one beautiful beginning.</span>
+      <span class="t" lang="mr">दोन मने, दोन कुटुंबे आणि एका नव्या जीवनाची सुंदर सुरुवात.</span>
+    </h2>
+    <p class="lede reveal">
+      <span class="t" lang="en">With the blessings of the Almighty, we request the honour of your presence as Utkarsh &amp; Shradha embark on their forever journey.</span>
+      <span class="t" lang="mr">ईश्वराच्या असीम आशीर्वादाने, उत्कर्ष आणि श्रद्धा यांच्या शुभविवाह सोहळ्यास आपण सहकुटुंब, सहपरिवार उपस्थित राहून वधू-वरांस शुभाशीर्वाद द्यावेत, ही नम्र विनंती.</span>
+    </p>
+
+    <div class="families">
+      <article class="family groom-card reveal">
+        <p class="role"><span class="t" lang="en">The groom</span><span class="t" lang="mr">वर</span></p>
+        <p class="honorific t" lang="mr">चि.</p>
+        <h3><span class="t" lang="en">Utkarsh</span><span class="t" lang="mr">उत्कर्ष</span></h3>
+        <p class="parents">
+          <span class="t" lang="en">Son of Roopali &amp; Appasaheb D. Chavan</span>
+          <span class="t" lang="mr">सौ. रूपाली व श्री. आप्पासाहेब द. चव्हाण यांचे सुपुत्र</span>
+        </p>
+      </article>
+
+      <figure class="arch family-arch reveal">
+        <img src="assets/photos/back-to-back.jpg" alt="Shradha in a pink and lavender silk saree and Utkarsh in a cream kurta and white cap, standing back to back among palms and bougainvillea" loading="lazy" width="854" height="1281">
+      </figure>
+
+      <article class="family bride-card reveal">
+        <p class="role"><span class="t" lang="en">The bride</span><span class="t" lang="mr">वधू</span></p>
+        <p class="honorific t" lang="mr">चि. सौ. का.</p>
+        <h3><span class="t" lang="en">Shradha</span><span class="t" lang="mr">श्रद्धा</span></h3>
+        <p class="parents">
+          <span class="t" lang="en">Daughter of Chandra &amp; Shirish B. Tashildar</span>
+          <span class="t" lang="mr">सौ. चंद्रा व श्री. शिरीष बा. ताशिलदार यांची सुकन्या</span>
+        </p>
+      </article>
+    </div>
+    <div class="padar"></div>
+  </section>
+
+  <!-- ═════════ PHOTO BAND ═════════ -->
+  <section class="band" aria-label="19 December 2026">
+    <img class="band-img" src="assets/photos/forehead-kiss.jpg" alt="Utkarsh kissing Shradha on the forehead as she smiles" loading="lazy" width="1280" height="853">
+    <p class="band-date" aria-hidden="true">
+      <span class="t" lang="en">19 · 12 · 2026</span>
+      <span class="t" lang="mr">१९ · १२ · २०२६</span>
+    </p>
+  </section>
+
+  <!-- ═════════ MUHURAT — kumkum red ═════════ -->
+  <section class="sec muhurat silk-kumkum" id="muhurat" aria-labelledby="muhurat-title">
+    <div class="mandala" id="mandala" aria-hidden="true"></div>
+
+    <p class="eyebrow reveal"><span class="t" lang="en">Until the muhurat</span><span class="t" lang="mr">शुभमुहूर्ताला उरले</span></p>
+    <h2 class="sr-only" id="muhurat-title">Muhurat, date and venue</h2>
+
+    <div class="countdown reveal" id="countdown" role="timer" aria-label="Time left until the muhurat">
+      <div class="unit"><span class="num" data-u="d">00</span><span class="lbl"><span class="t" lang="en">days</span><span class="t" lang="mr">दिवस</span></span></div>
+      <div class="unit"><span class="num" data-u="h">00</span><span class="lbl"><span class="t" lang="en">hours</span><span class="t" lang="mr">तास</span></span></div>
+      <div class="unit"><span class="num" data-u="m">00</span><span class="lbl"><span class="t" lang="en">minutes</span><span class="t" lang="mr">मिनिटे</span></span></div>
+      <div class="unit"><span class="num" data-u="s">00</span><span class="lbl"><span class="t" lang="en">seconds</span><span class="t" lang="mr">सेकंद</span></span></div>
+    </div>
+    <p class="married" id="married" hidden>
+      <span class="t" lang="en">Shubhamangal! Utkarsh &amp; Shradha are married. Thank you for your blessings.</span>
+      <span class="t" lang="mr">शुभमंगल! उत्कर्ष आणि श्रद्धा यांचा शुभविवाह संपन्न झाला. आपल्या आशीर्वादाबद्दल धन्यवाद.</span>
+    </p>
+
+    <div class="details">
+      <div class="detail reveal">
+        <h3><span class="t" lang="en">When</span><span class="t" lang="mr">शुभमुहूर्त</span></h3>
+        <p class="big"><span class="t" lang="en">Saturday, 19 December 2026</span><span class="t" lang="mr">शनिवार, १९ डिसेंबर २०२६</span></p>
+        <p><span class="t" lang="en">12:45 PM</span><span class="t" lang="mr">दुपारचे १२:४५ वाजता</span></p>
+      </div>
+      <div class="detail reveal">
+        <h3><span class="t" lang="en">Where</span><span class="t" lang="mr">विवाहस्थळ</span></h3>
+        <p class="big"><span class="t" lang="en">Shri Beereshwar Bhavan</span><span class="t" lang="mr">श्री बीरेश्वर भवन</span></p>
+        <p><span class="t" lang="en">Examba – Chikodi, Dist. Belgaum</span><span class="t" lang="mr">एकसंबा – चिकोडी, जि. बेळगाव</span></p>
+      </div>
+    </div>
+
+    <div class="actions reveal">
+      <a class="btn gold" href="https://maps.app.goo.gl/Foc7Q7ufQh1FTCvj7" target="_blank" rel="noopener">
+        <span class="t" lang="en">Get directions</span><span class="t" lang="mr">नकाशा उघडा</span>
+      </a>
+      <a class="btn ghost" id="gcal" href="#" target="_blank" rel="noopener">
+        <span class="t" lang="en">Add to Google Calendar</span><span class="t" lang="mr">Google Calendar मध्ये जोडा</span>
+      </a>
+      <a class="btn ghost" href="assets/utkarsh-shradha-wedding.ics" download>
+        <span class="t" lang="en">Apple / Outlook calendar</span><span class="t" lang="mr">Apple / Outlook कॅलेंडर</span>
+      </a>
+    </div>
+    <div class="padar"></div>
+  </section>
+
+  <!-- ═════════ MOMENTS — horizontal gallery ═════════ -->
+  <section class="gallery silk-teal deep" id="moments" aria-labelledby="moments-title">
+    <div class="gallery-pin">
+      <div class="track" id="track">
+        <div class="track-title">
+          <p class="eyebrow"><span class="t" lang="en">Moments</span><span class="t" lang="mr">क्षणचित्रे</span></p>
+          <h2 id="moments-title" lang="mr">क्षण</h2>
+          <p class="hint"><span class="t" lang="en">Keep scrolling · tap a photo to open it</span><span class="t" lang="mr">खाली स्क्रोल करा · फोटो उघडण्यासाठी स्पर्श करा</span></p>
+        </div>
+        <button class="frame" data-i="0"><img src="assets/photos/shy-laugh.jpg" alt="Shradha laughing behind her hand as Utkarsh holds her other hand" loading="lazy" width="854" height="1281"></button>
+        <button class="frame" data-i="1"><img src="assets/photos/palms.jpg" alt="Utkarsh embracing Shradha from behind under palm fronds" loading="lazy" width="854" height="1281"></button>
+        <button class="frame" data-i="2"><img src="assets/photos/laugh-close.jpg" alt="Close-up of Utkarsh and Shradha laughing, cheek to cheek" loading="lazy" width="854" height="1281"></button>
+        <button class="frame" data-i="3"><img src="assets/photos/pink-front.jpg" alt="Shradha in a pink silk saree holding the arm of Utkarsh in a cream kurta and white cap" loading="lazy" width="854" height="1281"></button>
+        <button class="frame" data-i="4"><img src="assets/photos/cheek.jpg" alt="Shradha with mehendi hands pressing Utkarsh's hand to her cheek, eyes closed" loading="lazy" width="854" height="1281"></button>
+        <button class="frame" data-i="5"><img src="assets/photos/sunset-stand.jpg" alt="Utkarsh standing behind Shradha at golden hour" loading="lazy" width="854" height="1281"></button>
+        <div class="track-end">
+          <p><span class="t" lang="en">…and the rest of the story on 19 December.</span><span class="t" lang="mr">…आणि पुढची गोष्ट १९ डिसेंबरला.</span></p>
+        </div>
+      </div>
+      <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+    </div>
+  </section>
+
+  <!-- ═════════ RINGS — B&W duotoned into zari gold ═════════ -->
+  <section class="sec rings" aria-labelledby="rings-title">
+    <figure class="duo wide reveal">
+      <img src="assets/photos/silhouette-wide.jpg" alt="Silhouette of Utkarsh and Shradha facing each other, holding two rings between them" loading="lazy" width="1280" height="853">
+    </figure>
+    <h2 class="reveal" id="rings-title">
+      <span class="t" lang="en">A celebration of love and togetherness</span>
+      <span class="t" lang="mr">स्नेह आणि अतूट बंधांचा सुंदर सोहळा</span>
+    </h2>
+    <div class="duo-pair">
+      <figure class="duo tall reveal"><img src="assets/photos/silhouette-tall.jpg" alt="Silhouette of the couple smiling at each other over two rings" loading="lazy" width="854" height="1281"></figure>
+      <figure class="duo tall reveal"><img src="assets/photos/rings-hands.jpg" alt="Two rings held up between fingertips against the light" loading="lazy" width="854" height="1281"></figure>
+    </div>
+    <div class="padar"></div>
+  </section>
+
+</main>
+
+<!-- ═════════ FOOTER — deep kumkum ═════════ -->
+<footer class="footer silk-kumkum deep">
+  <p class="eyebrow"><span class="t" lang="en">With best compliments from</span><span class="t" lang="mr">निमंत्रक व शुभाभिलाषी</span></p>
+  <p class="hosts">
+    <span class="t" lang="en">Chavan – Shelar family, relatives and friends</span>
+    <span class="t" lang="mr">चव्हाण – शेलार परिवार, सर्व नातेवाईक आणि मित्रपरिवार</span>
+  </p>
+
+  <div class="contacts">
+    <p class="eyebrow"><span class="t" lang="en">Contact</span><span class="t" lang="mr">संपर्क क्रमांक</span></p>
+    <a class="btn ghost" href="tel:+919448734058"><span class="t" lang="en">94487 34058</span><span class="t" lang="mr">९४४८७ ३४०५८</span></a>
+    <a class="btn ghost" href="tel:+919448161672"><span class="t" lang="en">94481 61672</span><span class="t" lang="mr">९४४८१ ६१६७२</span></a>
+  </div>
+
+  <div class="cards">
+    <a href="assets/cards/invitation-english.jpg" download="Utkarsh-Shradha-invitation-English.jpg" class="card-thumb">
+      <img src="assets/cards/invitation-english.jpg" alt="" loading="lazy" width="1136" height="1601">
+      <span><span class="t" lang="en">Save the invitation card (English)</span><span class="t" lang="mr">निमंत्रण पत्रिका (English)</span></span>
+    </a>
+    <a href="assets/cards/invitation-marathi.jpg" download="Utkarsh-Shradha-nimantran-Marathi.jpg" class="card-thumb">
+      <img src="assets/cards/invitation-marathi.jpg" alt="" loading="lazy" width="1136" height="1601">
+      <span><span class="t" lang="en">Save the invitation card (Marathi)</span><span class="t" lang="mr">निमंत्रण पत्रिका (मराठी)</span></span>
+    </a>
+  </div>
+
+  <p class="sign" lang="mr">उत्कर्ष <span>❀</span> श्रद्धा</p>
+</footer>
+
+<!-- ═════════ LIGHTBOX ═════════ -->
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <img alt="">
+  <button class="lb-btn lb-close" aria-label="Close photo">✕</button>
+  <button class="lb-btn lb-prev" aria-label="Previous photo">‹</button>
+  <button class="lb-btn lb-next" aria-label="Next photo">›</button>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

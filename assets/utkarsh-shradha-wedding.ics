@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Utkarsh & Shradha//Wedding//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:utkarsh-shradha-20261219@wedding
+DTSTAMP:20261101T000000Z
+DTSTART:20261219T071500Z
+DTEND:20261219T091500Z
+SUMMARY:Utkarsh & Shradha — Wedding (शुभविवाह)
+LOCATION:Shri Beereshwar Bhavan\, Examba\, Chikodi\, Dist. Belgaum
+DESCRIPTION:Shubh muhurat 12:45 PM.\nDirections: https://maps.app.goo.gl/Foc7Q7ufQh1FTCvj7
+URL:https://maps.app.goo.gl/Foc7Q7ufQh1FTCvj7
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Utkarsh & Shradha's wedding is tomorrow at 12:45 PM
+END:VALARM
+END:VEVENT
+END:VCALENDAR
