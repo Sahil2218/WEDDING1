@@ -4,7 +4,7 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const params = new URLSearchParams(location.search);
 
-  const MUHURAT = Date.UTC(2026, 11, 19, 7, 15); // 19 Dec 2026, 12:45 IST
+  const MUHURAT = Date.UTC(2026, 11, 19, 7, 14); // 19 Dec 2026, 12:44 IST
   const MAPS = 'https://maps.app.goo.gl/Foc7Q7ufQh1FTCvj7';
 
   const DEVA_DIGITS = '०१२३४५६७८९';
@@ -295,81 +295,15 @@
   $('#gcal').href = 'https://calendar.google.com/calendar/render?' + new URLSearchParams({
     action: 'TEMPLATE',
     text: 'Utkarsh & Shradha — Wedding (शुभविवाह)',
-    dates: '20261219T071500Z/20261219T091500Z',
-    details: `Shubh muhurat 12:45 PM.\nDirections: ${MAPS}`,
+    dates: '20261219T071400Z/20261219T091400Z',
+    details: `Shubh muhurat 12:44 PM.\nDirections: ${MAPS}`,
     location: 'Shri Beereshwar Bhavan, Examba, Chikodi, Dist. Belgaum',
   });
-
-  /* ── horizontal gallery, driven by vertical scroll ────── */
-  const gallery = $('#moments');
-  const pin = $('.gallery-pin', gallery);
-  const track = $('#track');
-  const bar = $('#progress');
-  let dist = 0;
-  function sizeGallery() {
-    if (reduced) { gallery.classList.add('static'); return; }
-    dist = Math.max(0, track.scrollWidth - pin.clientWidth);
-    gallery.style.height = `${pin.offsetHeight + dist}px`;
-  }
-  function moveGallery() {
-    if (reduced) return;
-    const span = gallery.offsetHeight - pin.offsetHeight;
-    const p = span > 0 ? Math.min(1, Math.max(0, -gallery.getBoundingClientRect().top / span)) : 0;
-    track.style.transform = `translate3d(${-p * dist}px,0,0)`;
-    bar.style.transform = `scaleX(${p})`;
-  }
-
-  /* ── parallax band ────────────────────────────────────── */
-  const band = $('.band');
-  const bandImg = $('.band-img');
-  function moveBand() {
-    if (reduced) return;
-    const r = band.getBoundingClientRect();
-    if (r.bottom < 0 || r.top > innerHeight) return;
-    const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight; // -1…1 through the viewport
-    bandImg.style.transform = `translate3d(0, ${p * -9}%, 0)`;
-  }
-
-  let ticking = false;
-  addEventListener('scroll', () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(() => { moveGallery(); moveBand(); ticking = false; });
-  }, { passive: true });
 
   let resizeTimer;
   addEventListener('resize', () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => { buildToran(); sizeGallery(); moveGallery(); }, 150);
-  });
-
-  /* ── lightbox ─────────────────────────────────────────── */
-  const lb = $('#lightbox');
-  const lbImg = $('img', lb);
-  const frames = $$('.frame');
-  let current = 0;
-  function show(i) {
-    current = (i + frames.length) % frames.length;
-    const img = $('img', frames[current]);
-    lbImg.src = img.src;
-    lbImg.alt = img.alt;
-  }
-  frames.forEach((f, i) => f.addEventListener('click', () => { show(i); lb.showModal(); }));
-  $('.lb-close', lb).addEventListener('click', () => lb.close());
-  $('.lb-prev', lb).addEventListener('click', () => show(current - 1));
-  $('.lb-next', lb).addEventListener('click', () => show(current + 1));
-  lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
-  lb.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') show(current - 1);
-    if (e.key === 'ArrowRight') show(current + 1);
-  });
-  let touchX = null;
-  lb.addEventListener('touchstart', (e) => (touchX = e.touches[0].clientX), { passive: true });
-  lb.addEventListener('touchend', (e) => {
-    if (touchX === null) return;
-    const dx = e.changedTouches[0].clientX - touchX;
-    if (Math.abs(dx) > 40) show(current + (dx < 0 ? 1 : -1));
-    touchX = null;
+    resizeTimer = setTimeout(buildToran, 150);
   });
 
   /* ── scroll reveals ───────────────────────────────────── */
@@ -384,7 +318,4 @@
   setLang(lang());
   // ?skip opens straight to the site (handy for sharing a deep link or re-checking layout)
   if (params.has('skip')) reveal(params.get('lang') || localStorage.getItem('lang') || 'en', true);
-  // wait for fonts + images so the gallery track has its real width
-  addEventListener('load', () => { sizeGallery(); moveGallery(); moveBand(); });
-  sizeGallery();
 })();
